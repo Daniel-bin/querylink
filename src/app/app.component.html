@@ -1,11 +1,11 @@
 <nav class="nav bg-dark d-flex ">
-	<h3 class="text-light m-1"><a class="nav-link" routerLink="/">Flopbox</a></h3>
-	<a class="nav-link" style="display:flex!important" routerLink="/flops">
+	<h3 class="text-light"><a class="nav-link" routerLink="/">Flopbox</a></h3>
+	<a class="nav-link" routerLink="/flops">
 		<h4 class="red">flops</h4>
 	</a>
 	<div style="display: inline-flex; margin-top: 6px">
-		<input type="text" class="form-control" placeholder="Filter stars">
-		<a class="nav-link" routerLink="/flops">Filter</a>
+		<input (change)="setStarFilter($event)" type="number" class="form-control" placeholder="Filter stars">
+		<a class="btn btn-info" style="display:inline-table" routerLink="/flops" [queryParams]="{starsMax:starsVal}">Go</a>
 	</div>
 </nav>
 
