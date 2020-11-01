@@ -4,8 +4,9 @@
 		<h4 class="red">flops</h4>
 	</a>
 	<div style="display: inline-flex; margin-top: 6px">
-		<input (change)="setStarFilter($event)" type="number" class="form-control" placeholder="Filter stars">
-		<a class="btn btn-info" style="display:inline-table" routerLink="/flops" [queryParams]="{starsMax:starsVal}">Go</a>
+		<input (change)="setStarFilter($event)" type="number" max="5" class="form-control" placeholder="Filter stars">
+		<a class="btn btn-info" style="display:inline-table" routerLink="/flops"
+			[queryParams]="{starsMax:starsVal}">Go</a>
 	</div>
 </nav>
 
